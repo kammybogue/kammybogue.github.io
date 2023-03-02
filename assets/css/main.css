@@ -2682,8 +2682,7 @@ input, select, textarea {
 
 			.spotlight .image img {
 				border-radius: 0;
-				height: 500px;
-				width: auto;
+				width: 100%;
 			}
 
 		.spotlight .content {
@@ -2692,8 +2691,8 @@ input, select, textarea {
 			-webkit-order: 2;
 			-ms-order: 2;
 			order: 2;
-			max-width: 48em;
-			width: 60%;
+			max-width: 68em;
+			width: 95%;
 		}
 
 		.spotlight:nth-child(2n) {
@@ -2704,11 +2703,11 @@ input, select, textarea {
 		}
 
 		.spotlight:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.075);
+			background-color: rgba(41, 46, 86, 255);
 		}
 
 		.spotlight:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.15);
+			background-color: rgba(76, 48, 89, 255);
 		}
 
 		.spotlight:nth-child(3) {
