@@ -2089,6 +2089,103 @@ input, select, textarea {
 			color: #76ddff;
 		}
 
+
+/* Icon Vertical*/
+
+
+.iconv {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+	.iconv:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		text-transform: none !important;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 400;
+		font-size: 2em;
+	}
+
+	.iconv > .label {
+		display: block;
+		vertical-align: middle;
+		margin-left: 1.5vw;
+		font-size: 1.5em;
+		width: fit-content;
+	}
+
+	@media only screen and (max-width:600px){
+		.iconv > .label{
+			font-size: 3.5vw;
+		}
+	}
+
+	.iconv:before {
+		line-height: inherit;
+	}
+
+	.iconv.solid:before {
+		font-weight: 900;
+	}
+
+	.iconv.brands:before {
+		font-family: 'Font Awesome 5 Brands';
+	}
+
+	.iconv.major {
+		-moz-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		border-radius: 3px;
+		border: solid 2px #fff;
+		display: inline-block;
+		font-size: 1.35em;
+		height: calc(3em + 2px);
+		line-height: 3em;
+		text-align: center;
+		width: calc(3em + 2px);
+	}
+
+		.iconv.major:before {
+			-moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+			display: inline-block;
+			font-size: 1.5em;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.iconv.major {
+				font-size: 1em;
+			}
+
+		}
+
+	.iconv.style1 {
+		color: #00ffcc;
+	}
+
+	.iconv.style2 {
+		color: #00f0ff;
+	}
+
+	.iconv.style3 {
+		color: #76ddff;
+	}
+
 /* Image */
 
 	.image {
@@ -2214,7 +2311,7 @@ input, select, textarea {
 		}
 
 			ul.actions.stacked li {
-				padding: 1em 0 0 0;
+				padding: 2em 0 0 0;
 			}
 
 				ul.actions.stacked li:first-child {
@@ -2265,7 +2362,7 @@ input, select, textarea {
 					-webkit-flex-shrink: 1;
 					-ms-flex-shrink: 1;
 					flex-shrink: 1;
-					padding: 1em 0 0 0;
+					padding: 2em 0 0 0;
 					text-align: center;
 					width: 100%;
 				}
@@ -2793,7 +2890,7 @@ input, select, textarea {
 
 		.wrapper > .inner {
 			width: 60em;
-			margin: 0 auto;
+			margin: auto;
 		}
 
 			@media screen and (max-width: 1280px) {
@@ -3757,6 +3854,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		justify-content: center;
 		max-width: 45em;
 	}
 
@@ -3765,8 +3863,9 @@ input, select, textarea {
 			-webkit-order: 1;
 			-ms-order: 1;
 			order: 1;
-			padding-right: 3em;
+			/* padding-right: 3em; */
 			width: 70%;
+			text-align: center;
 		}
 
 			#cta .inner header p {
@@ -3826,7 +3925,7 @@ input, select, textarea {
 	}
 
 		#main > header h2 {
-			font-size: 1.75em;
+			font-size: 2.5em;
 			margin: 0 0 0.5em 0;
 		}
 
