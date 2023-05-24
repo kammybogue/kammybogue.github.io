@@ -4096,3 +4096,26 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+
+	.gif_container{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.gifs{
+		width:40vw;
+		height:auto;
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.gif_container {
+			flex-direction: column ;
+		}
+        .gifs
+		{
+			width:60vw;}
+	}
