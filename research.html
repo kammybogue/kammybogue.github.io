@@ -47,6 +47,14 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
+								<p>									
+									<h5>Lodewijk Woltjer, 1967</h5>
+									<blockquote>The argument in the past has frequently been a process of elimination: one observed certain phenomena,
+										and one investigated what part of the phenomena could be explained; then the unexplained part was taken to
+										show the effects of the magnetic field. It is clear in this case that, the larger one's ignorance, the stronger
+										the magnetic field.</blockquote>
+								</p>
+
 								<p>There's a whole host of unanswered questions in astrophysics, including three big 'origin' questions; how did the Univrse begin, how are galaxies assembled, and how do stars form? A big priority in my own research work is to help answer that third question. You can read more about my work so far below, and of course if you have any questions you're welcome to <a href="contact.html">get in touch!</a></p>
 
 								<h3>What's The Problem?</h3>
@@ -55,8 +63,8 @@
 										<img src="images/JWST.jpg" alt="" />
 										NASA, ESA, CSA, JUDY SCHMIDT
 									</span>
-									We have been studying stars for a long, long, time, and we're still not precisely sure how they got there. If we want to understand star formation better, one approach is to study the <b>Interstellar Medium</b>, or 'ISM', the vast space between stellar systems in which new stars are born. This environment is comprised of gas, dust, ???. When you look at a typical image of a galaxy, the bulk of what you're seeing is the ISM, and all of the gas and dust inside it. There are many things about the ISM that we're still not sure about [whole myriad of unanswered questions], not least of which is the role of magnetic fields. 
-									[In particular, the impact of magnetic fields, both on the environments of star formation and indeed within astrophysics as a whole, is especially elusive.]. These fields have historically been troublesome to observe, even indirectly - indeed, even simulating them accurately still poses difficulties. In my research, I run high-resolution, simulations with the Arepo code. By creating both a magnetised and a purely hydrodynamic simulation of the same system, I'm able to decipher the precise impact of magnetic fields in this enigmatic process of forming stars.
+									We have been studying stars for a long, long, time, and we're still not precisely sure how they got there. If we want to understand star formation better, one approach is to study the <b>Interstellar Medium</b>, or 'ISM', the vast space between stellar systems in which new stars are born. This environemtn is made up of a bunch of different ingredients, such as gas, dust, magnetic fields and interstellar radiaition. When you look at a typical image of a galaxy, <b>the bulk of what you're seeing is the ISM</b>, and yet there are many things about the ISM that we're still not sure about! Not least of these is the role of magnetic fields. 
+									How much of an impact are these having on star forming environments? How much does that impact change between small and large sclaes? Part of the reason why we're still trying to get concrete answers to these questions is because magnetic fields have historically been troublesome to observe, even indirectly - indeed, even simulating them accurately still poses difficulties. In my research, I run cutting edge 3D high-resolution simulations of isolated galaxies with the Arepo code. By creating both a magnetised and a purely hydrodynamic simulation of the same system, I'm able to decipher the precise impact of magnetic fields in this enigmatic process of forming stars.
 								</p>
 
 								<hr />
@@ -67,10 +75,11 @@
 										<img src="images/MHD_FID_sdens.jpg" alt="" />
 										Caption for my own image?
 									</span>
-									A galaxy! Previous work by academics in this field has shown that the galactic environment has a profound effect on the sites of star formation, even though star fomration itself is occuring on much smaller scales. The system is interlinked, so in order to study star formation as accurately as possible, we need to incorporate the whole galactic environment. The huge range of scales involved here pose a problem for astronomers and astrophysicists; how is it possible to simulate star formation with sub-parsec resolution, throughout an entire galaxy, kiloparsecs in size? This is where Arepo's ability to adaptively vary it's spatial resolution comes in. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
-									
+									A galaxy! Previous work by academics in this field has shown that the galactic environment has a profound effect on the sites of star formation, even though star formation itself is occuring on much smaller scales. The system is interlinked, so in order to study star formation as accurately as possible, we need to incorporate the whole galactic environment. The huge range of scales involved here however pose a problem; how can we simulate star formation with sub-parsec resolution, throughout an entire galaxy, kiloparsecs in size? This is where Arepo's ability to adaptively vary it's spatial resolution comes in. 
+									To run a simulation with super-high resolution across the entire galaxy would be unfeasible, it would take too much time to run, and it would also be uneccesary. Within the galaxy, there are regions of high density, with lots of important activity on small scales, and regions of low density, where there aren't any signficant changes on these scales. In order to increase computational efficiency, Arepo is able to automatically increase the resolution in areas of high density, while similtaneously allowing low density regions to stay or even derefine to lower resolutions. 
+									To get thorough and trustworthy results from these simularions, we must also incorporate important physics that affect the galaxies evolution. For this reason, we include;
+
 									<div class="col-6 col-12-medium">
-										<h5>Heading</h5>
 										<ul>
 											<li>Self gravity</li>
 											<li>Sink particles for star formation (representing small clusters, not individual stars)</li>
@@ -78,6 +87,13 @@
 											<li>Supernovae feedback, which is tied to the sink particles</li>
 										</ul>
 									</div>
+
+									<div>
+									So what do these simulations look like? Below you can see the evolution of my galactic model from an intial condition generated by Robin Tress (Tress et al 2020) out to 250Myrs, both in terms of the gas density and in terms of the magnetic field.  
+									</div>
+
+									<img src="images/MHD_Ref7_FULL.gif" alt="Density Gif" style="width:25em;height:auto;">
+									<img src="images/MHD_Ref7_FULLMAG.gif" alt="Magnetic Field Gif" style="width:25em;height:auto;">
 								
 								</p>
 
@@ -86,20 +102,20 @@
 								<h3>What Can We Do With This Data?</h3>
 								<p>
 									
-									Testing text here
+									With the above simulation, we can already do a lot of interesting science, but, as mentioned previously, we are also running an analogous simulation with no magnetic fields present, allowing a comparison of the molecular clouds formed with and without magnetic fields. We are especially interesting in comparing the HD and MHD simulations; the analysis tools necessary for this process have already been developed, so results should be ready soon! Our initial goals are threefold;
 
 									<div class="col-6 col-12-medium">
-										<h5>Heading</h5>
 										<ul>
-											<li>Self gravity</li>
-											<li>Sink particles for star formation (representing small clusters, not individual stars)</li>
-											<li>Time dependent chemistry for H and CO (Glover & Clark 2012)</li>
-											<li>Supernovae feedback, which is tied to the sink particles</li>
+											<li>Firstly, we will investigate the importance of fields in shaping the formation of clouds by studying the correlation between the alignment of the magnetic field and molecular and atomic gas. This will be achieved using the Histogram of Relative Orientations (HRO) technique showcased in Soler et al. 2013. The link between atomic and molecular gas will then be investigated using Histograms of Gradients (HOGs) (Soler et al. 2019). 
+											</li>
+											<li>Secondly, we will scrutinise the impact of the magnetic fields on the star formation history of the galaxy as measured by sink particles, and investigate if the fields change the distribution of where stars are formed. 
+											</li>
+											<li>Thirdly we will compare the mass, sizes and gravitational binding of the molecular clouds formed with and without magnetic fields.
+											</li>
 										</ul>
 									</div>
 								
-									<h5>Blockquote</h5>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									The images below shows cloud extraction on earlier low-resolution test data. This was used to develop an analysis pipeline that calls astrodendro to find properties of density structures from the simulations. This pipeline is primed and ready for our new simulations, once they have finished running, and we are excited to see what we find!
 
 								</p>
 
@@ -107,9 +123,9 @@
 
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
-										<div class="col-4"><span class="image fit"><img src="images/MHD_FID_sdens.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/MHD_FID_mag_proj.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MHD_clouds.jpg" alt="" /></span></div>
 										<div class="col-4"><span class="image fit"><img src="images/cloud_identify_example.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/HD_clouds.jpg" alt="" /></span></div>
 									</div>
 								</div>
 
