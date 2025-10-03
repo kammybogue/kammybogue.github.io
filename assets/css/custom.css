@@ -1,0 +1,56 @@
+/* —— Intro section (ID: one) —— */
+#one.wrapper {
+  padding-top: 4rem;    
+  padding-bottom: 1.5rem;
+  background: #3e4a93;  
+}
+
+#one .inner--intro {
+  max-width: 95%;     /* Keep lines comfortably short */
+  margin: 0 auto;       /* Center block on wide screens */
+  text-align: left;
+}
+
+#one .intro__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: none
+}
+
+#one .intro__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+
+/* Default icon color (grey) */
+ul.icons li a.icon {
+  color: #919397;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+/* Icon color on hover (white) */
+ul.icons li a.icon:hover {
+  color: #ffffff;
+}
+
+/* Specific sizing for SVG-based Bluesky icon in footer */
+ul.icons li a.icon .bluesky-icon {
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: middle;
+  fill: currentColor;
+  transition: fill 0.2s ease;
+}
+
+/* Use the theme’s color for default and hover via 'currentColor' */
+ul.icons li a.icon { color: inherit; }           /* default (usually white) */
+ul.icons li a.icon:hover { color: #9bf1ff; }     /* Spectral's accent hover */
+
+
